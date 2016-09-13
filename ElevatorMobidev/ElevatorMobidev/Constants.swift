@@ -9,5 +9,17 @@
 import Foundation
 
 struct Constants {
-    static let someNotification = "TEST"
+    
+    static let minFloor = 5
+    static let maxFloor = 20
+    
+    static let maxPersons = 10
+    
+    static let elevatorMoveTime = 0.3
+    
+    static let maxPersonInElevator = 1
+    
+    static let consoleWhiteSpace = 10
+    
+    
 }

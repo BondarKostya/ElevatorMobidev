@@ -28,10 +28,10 @@ class ConsoleWrapper:NSObject
             }
         }
     }
-    
+    //I haven't found way to clear console through code
     static func clearConsole()
     {
-        for _ in 0...10
+        for _ in 0...Constants.consoleWhiteSpace
         {
             print("\n")
         }

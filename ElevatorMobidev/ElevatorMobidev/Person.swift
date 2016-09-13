@@ -21,17 +21,9 @@ class Person : NSObject {
         self.direction = self.destinationFloor > self.startFloor ? .UP : .DOWN
         
         super.init()
-        
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(Person.elevatorOnMyFloor), name: "elevatorOn\(self.startFloor)", object: nil)
-    }
-    
-    @objc func elevatorOnMyFloor()
-    {
-        
     }
     
 }
-
 extension Person : PrintSelf
 {
     func printSelf() -> String {

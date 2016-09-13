@@ -12,7 +12,7 @@ class ApplicationDirector : NSObject
 {
     func executeApplication()
     {
-        let building = Building(floorsCount: Int.random(5...20))
+        let building = Building(floorsCount: Int.random(Constants.minFloor...Constants.maxFloor))
         building.launchElevator()
         
         ConsoleWrapper.objectsForPrint.insertObject(building, atIndex: 0)

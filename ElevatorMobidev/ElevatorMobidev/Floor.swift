@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Floor : NSObject
+class Floor: NSObject
 {
     let floorNumber:Int
     var peoples:[Person]
@@ -17,6 +17,8 @@ class Floor : NSObject
     {
         self.floorNumber = floorNumber
         self.peoples = peoples
+        
+        super.init()
     }
 }
 
