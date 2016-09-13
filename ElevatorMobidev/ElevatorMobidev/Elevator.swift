@@ -44,6 +44,9 @@ class Elevator:NSObject
         self.building = building
         self.maxFloor = maxFloor
         elevatorState = .STOP
+    }
+    func launchElevator()
+    {
         self.startOrResumeTimer()
     }
     
@@ -195,22 +198,7 @@ class Elevator:NSObject
     
     func askAction()
     {
-        if(self.peoples.count == 0)
-        {
-            let upCheck = self.building?.getPeople(self.currentFloor, direction: .UP, personCount: 5);
-            if upCheck?.count > 0
-            {
-                self.peoples = upCheck!
-            }else
-            {
-                let downCheck = self.building?.getPeople(self.currentFloor, direction: .UP, personCount: 5);
-                if(downCheck?.count > 0)
-                {
-                    self.peoples = downCheck!
-                }
-                
-            }
-        }
+        
         if self.needToStopOnFloor(self.currentFloor)
         {
             self.elevatorState = .STOP
@@ -222,7 +210,7 @@ class Elevator:NSObject
         }
         let currentFloor = self.currentFloor
         self.building?.needToStopOnFloor(currentFloor, direction: self.direction) {[weak weakSelf = self] answer in
-            if(answer)
+            if(answer || weakSelf?.peoples.count == 0)
             {
                 weakSelf?.elevatorState = .STOP
             }
@@ -250,7 +238,7 @@ class Elevator:NSObject
     
     func startOrResumeTimer()
     {
-        moveTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector:#selector(Elevator.needToMove), userInfo: nil, repeats: true)
+        moveTimer = NSTimer.scheduledTimerWithTimeInterval(0.3, target: self, selector:#selector(Elevator.needToMove), userInfo: nil, repeats: true)
     }
 }
 

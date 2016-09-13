@@ -12,7 +12,7 @@ class ApplicationDirector : NSObject
 {
     func executeApplication()
     {
-        let building = Building(floorsCount: 10)
+        let building = Building(floorsCount: Int.random(5...20))
         building.launchElevator()
         
         ConsoleWrapper.objectsForPrint.insertObject(building, atIndex: 0)
@@ -28,7 +28,7 @@ extension Int
     {
         var offset = 0
         
-        if range.startIndex < 0   // allow negative ranges
+        if range.startIndex < 0
         {
             offset = abs(range.startIndex)
         }

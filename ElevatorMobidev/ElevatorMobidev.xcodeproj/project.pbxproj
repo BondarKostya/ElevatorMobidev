@@ -15,6 +15,7 @@
 		840972401D87BC420095B746 /* Floor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8409723F1D87BC420095B746 /* Floor.swift */; };
 		840972441D87BCE90095B746 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840972431D87BCE80095B746 /* Person.swift */; };
 		840972461D87C04C0095B746 /* ApplicationDirector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840972451D87C04C0095B746 /* ApplicationDirector.swift */; };
+		842803441D88BE710076DF33 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842803431D88BE710076DF33 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,6 +40,7 @@
 		8409723F1D87BC420095B746 /* Floor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Floor.swift; sourceTree = "<group>"; };
 		840972431D87BCE80095B746 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		840972451D87C04C0095B746 /* ApplicationDirector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationDirector.swift; sourceTree = "<group>"; };
+		842803431D88BE710076DF33 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				8409723F1D87BC420095B746 /* Floor.swift */,
 				840972431D87BCE80095B746 /* Person.swift */,
 				840972451D87C04C0095B746 /* ApplicationDirector.swift */,
+				842803431D88BE710076DF33 /* Constants.swift */,
 			);
 			path = ElevatorMobidev;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 				840972441D87BCE90095B746 /* Person.swift in Sources */,
 				840972311D87338B0095B746 /* main.swift in Sources */,
 				840972381D8736330095B746 /* Elevator.swift in Sources */,
+				842803441D88BE710076DF33 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +273,7 @@
 				840972361D87338C0095B746 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

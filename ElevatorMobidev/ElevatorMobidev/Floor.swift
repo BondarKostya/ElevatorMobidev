@@ -26,7 +26,7 @@ extension Floor : PrintSelf
         var peoplesPrint = ""
         for person in self.peoples
         {
-            peoplesPrint = "\(peoplesPrint)\(person.printSelf())"
+            peoplesPrint = "\(peoplesPrint) \(person.printSelf())"
         }
         return "fl\(self.floorNumber):\(peoplesPrint)"
     }

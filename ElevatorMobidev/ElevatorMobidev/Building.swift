@@ -138,7 +138,7 @@ class Building : NSObject
     
     func launchElevator()
     {
-        
+        self.elevator?.launchElevator()
     }
 }
 
@@ -150,11 +150,11 @@ extension Building : PrintSelf
         {
             if elevator?.currentFloor == floor.floorNumber
             {
-               buildingDescription = "\(buildingDescription)\n🚪\(floor.printSelf())"
+               buildingDescription = "\(buildingDescription)\n🚪\t\(floor.printSelf())"
             }
             else
             {
-               buildingDescription = "\(buildingDescription)\n  \(floor.printSelf())"
+               buildingDescription = "\(buildingDescription)\n\t\(floor.printSelf())"
             }
             
         }

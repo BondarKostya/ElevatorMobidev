@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ElevatorMobidev/Elevator.swift"
-            timestampString = "495495955.351438"
+            timestampString = "495500824.436583"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "234"
-            endingLineNumber = "234"
+            startingLineNumber = "238"
+            endingLineNumber = "238"
             landmarkName = "Elevator"
             landmarkType = "3">
          </BreakpointContent>
@@ -74,7 +74,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ElevatorMobidev/ApplicationDirector.swift"
-            timestampString = "495465850.462091"
+            timestampString = "495500824.436583"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "15"
@@ -106,11 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ElevatorMobidev/Elevator.swift"
-            timestampString = "495493382.688456"
+            timestampString = "495500824.436583"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "elevatorAction()"
             landmarkType = "5">
          </BreakpointContent>
@@ -122,27 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ElevatorMobidev/Elevator.swift"
-            timestampString = "495495955.351438"
+            timestampString = "495500824.436583"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "209"
-            endingLineNumber = "209"
-            landmarkName = "askAction()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ElevatorMobidev/Elevator.swift"
-            timestampString = "495493382.688456"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
             landmarkName = "elevatorAction()"
             landmarkType = "5">
          </BreakpointContent>
@@ -154,27 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ElevatorMobidev/Elevator.swift"
-            timestampString = "495493382.688456"
+            timestampString = "495500824.436583"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
-            landmarkName = "Elevator"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ElevatorMobidev/Elevator.swift"
-            timestampString = "495495955.351438"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "233"
-            endingLineNumber = "233"
+            startingLineNumber = "237"
+            endingLineNumber = "237"
             landmarkName = "needToMove()"
             landmarkType = "5">
          </BreakpointContent>
@@ -186,11 +154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ElevatorMobidev/Elevator.swift"
-            timestampString = "495495955.351438"
+            timestampString = "495500824.436583"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
             landmarkName = "moveDownAction()"
             landmarkType = "5">
          </BreakpointContent>
@@ -202,11 +170,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ElevatorMobidev/Elevator.swift"
-            timestampString = "495495955.351438"
+            timestampString = "495500824.436583"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
             landmarkName = "moveUpAction()"
             landmarkType = "5">
          </BreakpointContent>
@@ -218,11 +186,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ElevatorMobidev/Elevator.swift"
-            timestampString = "495495955.351438"
+            timestampString = "495500824.436583"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
             landmarkName = "emptyMoveAction()"
             landmarkType = "5">
          </BreakpointContent>
@@ -234,11 +202,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ElevatorMobidev/Elevator.swift"
-            timestampString = "495495955.351438"
+            timestampString = "495500824.436583"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "137"
-            endingLineNumber = "137"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
             landmarkName = "stopAction()"
             landmarkType = "5">
          </BreakpointContent>
@@ -250,11 +218,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ElevatorMobidev/Elevator.swift"
-            timestampString = "495495955.351438"
+            timestampString = "495500824.436583"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "237"
-            endingLineNumber = "237"
+            startingLineNumber = "241"
+            endingLineNumber = "241"
             landmarkName = "startOrResumeTimer()"
             landmarkType = "5">
          </BreakpointContent>
@@ -266,11 +234,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ElevatorMobidev/Elevator.swift"
-            timestampString = "495495955.351438"
+            timestampString = "495500824.436583"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "230"
-            endingLineNumber = "230"
+            startingLineNumber = "234"
+            endingLineNumber = "234"
             landmarkName = "needToMove()"
             landmarkType = "5">
          </BreakpointContent>
@@ -282,11 +250,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ElevatorMobidev/Elevator.swift"
-            timestampString = "495494223.690116"
+            timestampString = "495500824.436583"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
             landmarkName = "elevatorAction()"
             landmarkType = "5">
          </BreakpointContent>
@@ -298,11 +266,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ElevatorMobidev/Elevator.swift"
-            timestampString = "495495955.351438"
+            timestampString = "495500824.436583"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "116"
-            endingLineNumber = "116"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
             landmarkName = "moveDownAction()"
             landmarkType = "5">
          </BreakpointContent>
@@ -314,13 +282,76 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ElevatorMobidev/Elevator.swift"
-            timestampString = "495495955.351438"
+            timestampString = "495500824.436583"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "115"
-            endingLineNumber = "115"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
             landmarkName = "moveDownAction()"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ElevatorMobidev/Elevator.swift"
+            timestampString = "495500824.436583"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "212"
+            endingLineNumber = "212"
+            landmarkName = "askAction()"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ElevatorMobidev.Elevator.askAction () -&gt; ()"
+                  moduleName = "ElevatorMobidev"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Development/ElevatorMobidev/ElevatorMobidev/ElevatorMobidev/ElevatorMobidev/Elevator.swift"
+                  timestampString = "495499824.732193"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "230"
+                  endingLineNumber = "230"
+                  offsetFromSymbolStart = "2029">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ElevatorMobidev.Elevator.askAction () -&gt; ()"
+                  moduleName = "ElevatorMobidev"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Development/ElevatorMobidev/ElevatorMobidev/ElevatorMobidev/ElevatorMobidev/Elevator.swift"
+                  timestampString = "495499824.732747"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "230"
+                  endingLineNumber = "230"
+                  offsetFromSymbolStart = "2243">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ElevatorMobidev.Elevator.(askAction () -&gt; ()).(closure #1)"
+                  moduleName = "ElevatorMobidev"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Development/ElevatorMobidev/ElevatorMobidev/ElevatorMobidev/ElevatorMobidev/Elevator.swift"
+                  timestampString = "495499824.733274"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "230"
+                  endingLineNumber = "230"
+                  offsetFromSymbolStart = "19">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
