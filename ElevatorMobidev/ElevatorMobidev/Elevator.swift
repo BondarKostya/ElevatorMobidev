@@ -200,18 +200,16 @@ class Elevator:NSObject
             let upCheck = self.building?.getPeople(self.currentFloor, direction: .UP, personCount: 5);
             if upCheck?.count > 0
             {
-                self.peoples = upCheck
+                self.peoples = upCheck!
             }else
             {
                 let downCheck = self.building?.getPeople(self.currentFloor, direction: .UP, personCount: 5);
                 if(downCheck?.count > 0)
                 {
-                    self.peoples = downCheck
+                    self.peoples = downCheck!
                 }
                 
             }
-            
-            
         }
         if self.needToStopOnFloor(self.currentFloor)
         {
