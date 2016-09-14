@@ -11,12 +11,12 @@ import Foundation
 class Floor: NSObject
 {
     let floorNumber:Int
-    var peoples:[Person]
+    var persons:[Person]
     
-    init(floorNumber:Int,peoples:[Person])
+    init(floorNumber:Int,persons:[Person])
     {
         self.floorNumber = floorNumber
-        self.peoples = peoples
+        self.persons = persons
         
         super.init()
     }
@@ -25,11 +25,11 @@ class Floor: NSObject
 extension Floor : PrintSelf
 {
     func printSelf() -> String {
-        var peoplesPrint = ""
-        for person in self.peoples
+        var personsPrint = ""
+        for person in self.persons
         {
-            peoplesPrint = "\(peoplesPrint) \(person.printSelf())"
+            personsPrint = "\(personsPrint) \(person.printSelf())"
         }
-        return "fl\(self.floorNumber):\(peoplesPrint)"
+        return "fl\(self.floorNumber):\(personsPrint)"
     }
 }

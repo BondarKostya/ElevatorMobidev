@@ -73,17 +73,41 @@
 		8409722F1D8733880095B746 /* ElevatorMobidev */ = {
 			isa = PBXGroup;
 			children = (
-				840972371D8736330095B746 /* Elevator.swift */,
+				842803461D88CC680076DF33 /* MainParts */,
+				842803451D88CC490076DF33 /* main */,
+				842803471D88CC8C0076DF33 /* Help and Setting */,
+			);
+			path = ElevatorMobidev;
+			sourceTree = "<group>";
+		};
+		842803451D88CC490076DF33 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				840972451D87C04C0095B746 /* ApplicationDirector.swift */,
 				840972301D87338B0095B746 /* main.swift */,
-				840972391D873C920095B746 /* ConsoleWrapper.swift */,
-				8409723B1D8748A50095B746 /* PrintSelf.swift */,
+			);
+			name = main;
+			sourceTree = "<group>";
+		};
+		842803461D88CC680076DF33 /* MainParts */ = {
+			isa = PBXGroup;
+			children = (
+				840972371D8736330095B746 /* Elevator.swift */,
 				8409723D1D87BB0C0095B746 /* Building.swift */,
 				8409723F1D87BC420095B746 /* Floor.swift */,
 				840972431D87BCE80095B746 /* Person.swift */,
-				840972451D87C04C0095B746 /* ApplicationDirector.swift */,
+			);
+			name = MainParts;
+			sourceTree = "<group>";
+		};
+		842803471D88CC8C0076DF33 /* Help and Setting */ = {
+			isa = PBXGroup;
+			children = (
+				840972391D873C920095B746 /* ConsoleWrapper.swift */,
+				8409723B1D8748A50095B746 /* PrintSelf.swift */,
 				842803431D88BE710076DF33 /* Constants.swift */,
 			);
-			path = ElevatorMobidev;
+			name = "Help and Setting";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

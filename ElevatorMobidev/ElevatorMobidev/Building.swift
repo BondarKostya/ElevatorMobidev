@@ -22,7 +22,7 @@ class Building : NSObject
         super.init()
         
         for floorNumber in 1...floorsCount {
-            var peoplesOnFloor = [Person]()
+            var personsOnFloor = [Person]()
             
             //creating random persons for floor
             for _ in 0...Int.random(0...(Constants.maxPersons - 1))
@@ -33,11 +33,11 @@ class Building : NSObject
                 {
                     destFloor = Int.random(1...floorsCount)
                 }
-                peoplesOnFloor.append(Person(destinationFloor: destFloor, startFloor: floorNumber))
+                personsOnFloor.append(Person(destinationFloor: destFloor, startFloor: floorNumber))
                 
             }
             
-            let floor = Floor(floorNumber: floorNumber,peoples: peoplesOnFloor)
+            let floor = Floor(floorNumber: floorNumber,persons: personsOnFloor)
             self.floors.append(floor)
             
         }
@@ -56,61 +56,61 @@ class Building : NSObject
 
     // MARK: Get persons through the requests
     //return touple with direction and person array
-    func getMostPeople(floorNumber:Int) -> (direction:Direction,peoples:[Person])
+    func getMostPersons(floorNumber:Int) -> (direction:Direction,persons:[Person])
     {
         let floor = self.floors.filter {
             $0.floorNumber == floorNumber ? true : false
         }[0]
         
-        let upDirectionPeople = floor.peoples.filter {
+        let upDirectionPersons = floor.persons.filter {
             $0.direction == Direction.UP ? true : false
         }
-        let downDirectionPeople = floor.peoples.filter {
+        let downDirectionPersons = floor.persons.filter {
             $0.direction == Direction.DOWN ? true : false
         }
         
         //find what direction is dominant and return data
-        if upDirectionPeople.count > downDirectionPeople.count
+        if upDirectionPersons.count > downDirectionPersons.count
         {
-            self.removePeopleFromFloor(floorNumber, people: Array(upDirectionPeople.prefix(5)))
-            return (.UP,Array(upDirectionPeople.prefix(Constants.maxPersonInElevator)))
+            self.removePersonFromFloor(floorNumber, persons: Array(upDirectionPersons.prefix(5)))
+            return (.UP,Array(upDirectionPersons.prefix(Constants.maxPersonInElevator)))
         }
         else
         {
-            self.removePeopleFromFloor(floorNumber, people: Array(downDirectionPeople.prefix(5)))
-            return (.DOWN,Array(downDirectionPeople.prefix(Constants.maxPersonInElevator)))
+            self.removePersonFromFloor(floorNumber, persons: Array(downDirectionPersons.prefix(5)))
+            return (.DOWN,Array(downDirectionPersons.prefix(Constants.maxPersonInElevator)))
         }
     }
     
-    func getPeople(floorNumber:Int,direction:Direction,personCount:Int) -> [Person]
+    func getPersons(floorNumber:Int,direction:Direction,personCount:Int) -> [Person]
     {
         let floor = self.floors.filter {
             $0.floorNumber == floorNumber ? true : false
         }[0]
         
-        var directionPeople = floor.peoples.filter {
+        var directionPersons = floor.persons.filter {
             $0.direction == direction ? true : false
         }
-        directionPeople =  Array(directionPeople.prefix(personCount));
+        directionPersons =  Array(directionPersons.prefix(personCount));
         
-        self.removePeopleFromFloor(floorNumber, people: directionPeople)
-        return directionPeople
+        self.removePersonFromFloor(floorNumber, persons: directionPersons)
+        return directionPersons
     }
     
     // MARK: Remove person
-    func removePeopleFromFloor(floorNumber:Int, people:[Person])
+    func removePersonFromFloor(floorNumber:Int, persons:[Person])
     {
         let floor = self.floors.filter {
             $0.floorNumber == floorNumber ? true : false
         }[0]
         
         //safe, reverce removing from array
-        for (index,person) in floor.peoples.enumerate().reverse()
+        for (index,person) in floor.persons.enumerate().reverse()
         {
-            //check if the person to remove, containts in floor peoples
-            if let _ = people.indexOf(person)
+            //check if the person to remove, containts in floor persons
+            if let _ = persons.indexOf(person)
             {
-                floor.peoples.removeAtIndex(index)
+                floor.persons.removeAtIndex(index)
             }
         }
     }
@@ -125,7 +125,7 @@ class Building : NSObject
             }[0]
         
         //return persons with same direction
-        for person in floor.peoples
+        for person in floor.persons
         {
             if person.direction == direction
             {
@@ -141,7 +141,7 @@ class Building : NSObject
         var nearbyFloor = 1;
         //calculate nearby floor with abs method
         for floor in self.floors {
-            if(floor.peoples.count > 0)
+            if(floor.persons.count > 0)
             {
                 if(abs(floor.floorNumber - floorNumber) < deltaFloorNumber)
                 {
@@ -154,10 +154,10 @@ class Building : NSObject
         return nearbyFloor
     }
     
-    func havePeoplesOnFloors() -> Bool
+    func havePersonsOnFloors() -> Bool
     {
         for floor in self.floors {
-            if floor.peoples.count > 0
+            if floor.persons.count > 0
             {
                return true
             }

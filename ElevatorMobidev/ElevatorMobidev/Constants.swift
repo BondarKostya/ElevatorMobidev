@@ -15,9 +15,9 @@ struct Constants {
     
     static let maxPersons = 10
     
-    static let elevatorMoveTime = 0.3
+    static let elevatorMoveTime = 1.0
     
-    static let maxPersonInElevator = 1
+    static let maxPersonInElevator = 5
     
     static let consoleWhiteSpace = 10
     

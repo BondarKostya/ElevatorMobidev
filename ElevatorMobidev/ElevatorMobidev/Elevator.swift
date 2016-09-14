@@ -33,7 +33,7 @@ class Elevator:NSObject
     var currentFloor = 1
     var maxFloor:Int!
     let maxPersonCount = Constants.maxPersonInElevator
-    var peoples = [Person]()
+    var persons = [Person]()
     var elevatorState = ElevatorState.STOP {
         didSet {
             //switching moveUp to moveDown always pass through the stop state
@@ -105,7 +105,7 @@ class Elevator:NSObject
         }else
         {
             self.stopAction()
-            self.checkForPeoplesInBuilding(.DOWN)
+            self.checkForPersonsInBuilding(.DOWN)
         }
     }
     
@@ -119,20 +119,20 @@ class Elevator:NSObject
         }else
         {
             self.stopAction()
-            self.checkForPeoplesInBuilding(.UP)
+            self.checkForPersonsInBuilding(.UP)
         }
     }
     
     func stopAction()
     {
-        self.removePeopleInNeededFloor()
-        if self.peoples.count > 0
+        self.removePersonInNeededFloor()
+        if self.persons.count > 0
         {
-            self.addPeopleToElevator()
+            self.addPersonToElevator()
         }
         else
         {
-            if self.addMostPeopleToEmptyElevator() == false
+            if self.addMostPersonToEmptyElevator() == false
             {
                 self.elevatorState = .EMPTY_MOVE
             }
@@ -145,22 +145,22 @@ class Elevator:NSObject
         if needFloor > self.currentFloor
         {
             self.direction = .UP
-            self.checkForPeoplesInBuilding(.UP)
+            self.checkForPersonsInBuilding(.UP)
             self.elevatorState = .MOVE_UP
         }
         else
         {
             self.direction = .DOWN
-            self.checkForPeoplesInBuilding(.DOWN)
+            self.checkForPersonsInBuilding(.DOWN)
             self.elevatorState = .MOVE_DOWN
         }
     }
 
     //MARK: Cheking
     
-    func checkForPeoplesInBuilding(direction:Direction)
+    func checkForPersonsInBuilding(direction:Direction)
     {
-        if self.building?.havePeoplesOnFloors() == true
+        if self.building?.havePersonsOnFloors() == true
         {
             self.direction = direction
         }
@@ -177,13 +177,13 @@ class Elevator:NSObject
             self.elevatorState = .STOP
             return
         }
-        if self.peoples.count == Constants.maxPersonInElevator
+        if self.persons.count == Constants.maxPersonInElevator
         {
             return;
         }
         let currentFloor = self.currentFloor
         self.building?.needToStopOnFloor(currentFloor, direction: self.direction) {[weak weakSelf = self] answer in
-            if(answer || weakSelf?.peoples.count == 0)
+            if(answer || weakSelf?.persons.count == 0)
             {
                 weakSelf?.elevatorState = .STOP
             }
@@ -192,7 +192,7 @@ class Elevator:NSObject
     
     func needToStopOnFloor(floorNumber:Int) -> Bool
     {
-        for person in self.peoples
+        for person in self.persons
         {
             if person.destinationFloor == floorNumber
             {
@@ -204,33 +204,33 @@ class Elevator:NSObject
     
     //MARK: Managing persons in elevetor and floor
 
-    func addPeopleToElevator()
+    func addPersonToElevator()
     {
-        let needToAdd = Constants.maxPersonInElevator - self.peoples.count
-        let peopleOnFloor = (self.building?.getPeople(self.currentFloor, direction: self.direction,personCount: needToAdd))!
-        self.peoples.appendContentsOf(peopleOnFloor)
+        let needToAdd = Constants.maxPersonInElevator - self.persons.count
+        let personsOnFloor = (self.building?.getPersons(self.currentFloor, direction: self.direction,personCount: needToAdd))!
+        self.persons.appendContentsOf(personsOnFloor)
         self.elevatorState = self.direction == .UP ? .MOVE_UP : .MOVE_DOWN
     }
     
-    func addMostPeopleToEmptyElevator() -> Bool
+    func addMostPersonToEmptyElevator() -> Bool
     {
-        let mostPeople = self.building?.getMostPeople(self.currentFloor)
-        if mostPeople!.peoples.count > 0
+        let mostPersons = self.building?.getMostPersons(self.currentFloor)
+        if mostPersons!.persons.count > 0
         {
-            self.peoples = mostPeople!.peoples
-            self.direction = mostPeople!.direction
+            self.persons = mostPersons!.persons
+            self.direction = mostPersons!.direction
             self.elevatorState = self.direction == .UP ? .MOVE_UP : .MOVE_DOWN
             return true;
         }
         return false
     }
     
-    func removePeopleInNeededFloor()
+    func removePersonInNeededFloor()
     {
-        for (index,person) in self.peoples.enumerate().reverse() {
+        for (index,person) in self.persons.enumerate().reverse() {
             if person.destinationFloor == self.currentFloor
             {
-                peoples.removeAtIndex(index)
+                persons.removeAtIndex(index)
             }
         }
     }
@@ -240,7 +240,7 @@ extension Elevator:PrintSelf
 {
     func printSelf() -> String {
         var elevatorDescription =  "Elevator: floor - \(self.currentFloor), direction - \(self.direction)\n"
-        for person in self.peoples
+        for person in self.persons
         {
             elevatorDescription = "\(elevatorDescription)\(person.printSelf())"
         }
