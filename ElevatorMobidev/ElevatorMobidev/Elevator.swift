@@ -230,6 +230,7 @@ class Elevator:NSObject
         for (index,person) in self.persons.enumerate().reverse() {
             if person.destinationFloor == self.currentFloor
             {
+                self.building?.addPersonToFloorAndRegenerateDestFloor(self.currentFloor, person: person)
                 persons.removeAtIndex(index)
             }
         }

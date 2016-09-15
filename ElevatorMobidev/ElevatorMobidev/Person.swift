@@ -10,17 +10,26 @@ import Foundation
 
 class Person : NSObject {
     
-    let destinationFloor:Int
-    let startFloor:Int
-    let direction:Direction!
+    var destinationFloor = 1
+    var startFloor = 1
+    var direction:Direction!
     
     init(destinationFloor:Int,startFloor:Int)
+    {
+        super.init()
+        self.initProperties(destinationFloor, startFloor: startFloor)
+    }
+    
+    func initProperties(destinationFloor:Int,startFloor:Int)
     {
         self.destinationFloor = destinationFloor
         self.startFloor = startFloor
         self.direction = self.destinationFloor > self.startFloor ? .UP : .DOWN
-        
-        super.init()
+    }
+    
+    func changeFloors(destinationFloor:Int,startFloor:Int)
+    {
+        self.initProperties(destinationFloor, startFloor: startFloor)
     }
     
 }

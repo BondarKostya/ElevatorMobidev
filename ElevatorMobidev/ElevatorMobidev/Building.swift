@@ -13,15 +13,16 @@ class Building : NSObject
     // MARK: Properties
     var floors : [Floor]
     var elevator : Elevator?
+    var floorsCount:Int
     
     // MARK: - Init building
     init(floorsCount: Int)
     {
         self.floors = [Floor]()
-        
+        self.floorsCount = floorsCount
         super.init()
         
-        for floorNumber in 1...floorsCount {
+        for floorNumber in 1...self.floorsCount {
             var personsOnFloor = [Person]()
             
             //creating random persons for floor
@@ -31,7 +32,7 @@ class Building : NSObject
                 var destFloor = floorNumber
                 while destFloor == floorNumber
                 {
-                    destFloor = Int.random(1...floorsCount)
+                    destFloor = Int.random(1...self.floorsCount)
                 }
                 personsOnFloor.append(Person(destinationFloor: destFloor, startFloor: floorNumber))
                 
@@ -58,9 +59,7 @@ class Building : NSObject
     //return touple with direction and person array
     func getMostPersons(floorNumber:Int) -> (direction:Direction,persons:[Person])
     {
-        let floor = self.floors.filter {
-            $0.floorNumber == floorNumber ? true : false
-        }[0]
+        let floor = self.neededFloor(floorNumber)
         
         let upDirectionPersons = floor.persons.filter {
             $0.direction == Direction.UP ? true : false
@@ -84,9 +83,7 @@ class Building : NSObject
     
     func getPersons(floorNumber:Int,direction:Direction,personCount:Int) -> [Person]
     {
-        let floor = self.floors.filter {
-            $0.floorNumber == floorNumber ? true : false
-        }[0]
+        let floor = self.neededFloor(floorNumber)
         
         var directionPersons = floor.persons.filter {
             $0.direction == direction ? true : false
@@ -97,12 +94,23 @@ class Building : NSObject
         return directionPersons
     }
     
+    //MARK: Add person to floor and regenerate destination floor
+    func addPersonToFloorAndRegenerateDestFloor(floorNumber:Int,person:Person)
+    {
+        let floor = self.neededFloor(floorNumber)
+        var destFloor = floorNumber
+        while destFloor == floorNumber
+        {
+            destFloor = Int.random(1...floorsCount)
+        }
+        person.changeFloors(destFloor, startFloor: floor.floorNumber)
+        floor.persons.append(person)
+    }
+    
     // MARK: Remove person
     func removePersonFromFloor(floorNumber:Int, persons:[Person])
     {
-        let floor = self.floors.filter {
-            $0.floorNumber == floorNumber ? true : false
-        }[0]
+        let floor = self.neededFloor(floorNumber)
         
         //safe, reverce removing from array
         for (index,person) in floor.persons.enumerate().reverse()
@@ -115,14 +123,22 @@ class Building : NSObject
         }
     }
     
-    //MARK: Checks
-    //demonstrate work with <block> , better write this method without <block>
-    func needToStopOnFloor(floorNumber:Int,direction:Direction,responce:(answer:Bool) -> Void)
+    //MARK: Get needed floor
+    func neededFloor(floorNumber:Int) -> Floor
     {
         //find the current floor throught the array filtering
         let floor = self.floors.filter {
             $0.floorNumber == floorNumber ? true : false
             }[0]
+        return floor;
+    }
+    
+    //MARK: Checks
+    //demonstrate work with <block> , better write this method without <block>
+    func needToStopOnFloor(floorNumber:Int,direction:Direction,responce:(answer:Bool) -> Void)
+    {
+        
+        let floor = self.neededFloor(floorNumber)
         
         //return persons with same direction
         for person in floor.persons
